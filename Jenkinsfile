@@ -1,4 +1,5 @@
 pipeline {
+  agent none
   stages {
     stage('Build') {
       agent {
@@ -6,9 +7,8 @@ pipeline {
           filename 'Dockerfile'
         }        
       }
-      steps {
-        def app = docker.build("simple-image")
-      }
+      
+      def app = docker.build("simple-image")
     }
 
     stage('Test') {
