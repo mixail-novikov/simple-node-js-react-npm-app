@@ -8,6 +8,7 @@ pipeline {
       }
       steps {
         def app = docker.build("simple-image")
+      }
     }
 
     stage('Test') {
