@@ -9,4 +9,4 @@ RUN npm install
 ADD . .
 RUN npm run build
 
-ENTRYPOINT ["npm", "start"]
+CMD ["npm", "start"]
